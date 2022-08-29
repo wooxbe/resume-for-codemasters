@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  font-size: 16px;
+}
+
+.body {
+  background-color: #06232C;
+}
+
+.title{
+  font-weight: 800;
+  font-size: 1.2rem;
+  margin: 0 0 1rem;
+}
+.text{
+  font-size: 0.9rem;
+}
+
+
+.container {
+  width: 60rem;
+  margin: 0 auto;
+  font-size: 10px;
+  color: #DCDCDC;
+}
+
+.profile_img {
+  width: 7.2rem;
+  height: 7.2rem;
+}
+
+.header {
+  display: flex;
+}
+
+.profile {
+  display: flex;
+  margin: 3rem 0 0;
+}
+
+.profile_detail {
+  margin: 0 0 0 0.5rem;
+}
+
+.profile_name {
+  font-size: 2.4rem;
+  font-weight: 800;
+  width: 25rem;
+  line-height: 0.9;
+}
+
+.profile_position {
+  margin: 0.9rem 0 0;
+  font-size: 1.4rem;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.contact_detail{
+  margin: 1rem 0 0 13rem;
+
+}
+.contact_detail_list{
+  list-style-type: none;
+
+}
+.contact_detail_item{
+  list-style-type: none;
+  margin: 0.8rem 0 0;
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+.contact_detail_icon{
+  width: 1rem;
+  height: 1rem;
+  color: #FFFFFF;
+}
+.contact_detail_text{
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.main_content{
+  display: flex;
+  margin: 0.9rem 0 0;
+  border-top: 1px solid #ffffff41;
+}
+.left_contect{
+  width: 38rem;
+  border-right: 1px solid #ffffff41;
+}
+.right_contect{
+}
+
+.subtitle ::after{
+  content: '';
+  background-image: url('./svg/Rectangle 61329.svg');
+  width: 0.6rem;
+  height: 0.6rem;
+}
+
+.about{
+  padding: 0 0.5rem 1rem 0;
+  margin: 0.7rem 0 0;
+  border-bottom: 1px solid #ffffff41;;
+}
+
+.about_description{
+  font-weight: 400;
+  line-height: 1.4;
+}
+.education{
+  padding: 1rem 0 0;
+}
+.education_name{
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 19px;
+}
+.education_text{
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  margin: 0.5rem 0 0;
+}
+
+.technologies{
+  border-bottom: 1px solid #ffffff41;;
+  padding: 1rem 0.5rem 1rem 1.2rem;
+
+}
+
+.languages {
+  border-bottom: 1px solid #ffffff41;
+  padding: 1rem 0.5rem 1rem 1.2rem;
+
+}
+.hobbies{
+  padding: 1rem 0.5rem 1rem 1.2rem;
+
+}
+.hobbies_list{
+  list-style-type: none;
+}
