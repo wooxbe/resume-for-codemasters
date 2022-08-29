@@ -1,1 +1,1 @@
-# test_project
+# Тестовое задание для CodeMasters
