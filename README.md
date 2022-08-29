@@ -1,1 +1,1 @@
-# Тестовое задание для CodeMasters
+# Test_work_for_codemasters
