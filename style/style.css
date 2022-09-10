@@ -1,24 +1,31 @@
 /*это плохая практика, можно поступить лучше*/
 /*и использовать normalize.css, кроме того задать отдельным блокам их сбросы по необходимости,*/
 /*это бывает крайне редко нужным, а нагрузка на каждый элемент (*) очевидно излишняя*/
-* {
-  margin: 0;
-  padding: 0;
+ @font-face {
+  font-family: 'OpenSans';
+  src: url(/fonts/OpenSans.ttf);
+  font-style: normal;
+  font-weight: normal;
 }
 
+:root {
+  --color-main: #06232C;
+  --color-secondary: #DCDCDC;
+  --color-lines: #ffffff41;
+}
 /*это больше для body подходит, html скорее служебный тег, body является частью визуала*/
-html {
-  font-size: 16px;
-}
-
 .body {
-  background-color: #06232C;
+  background-color: var(--color-main);
+  font-size: 16px;
+  font-family: 'OpenSans';
+  font-style: normal;
+  box-sizing: border-box;
 }
 
 .title {
   font-weight: 800;
-  font-size: 1.2rem;
-  margin: 0 0 1rem;
+  font-size: 19px;
+  margin: 0 0 16px;
 }
 
 /**
@@ -27,120 +34,131 @@ html {
    профит в том чтобы не указывать лишние стили там где они будут каскадом распространятся
  */
 .text {
-  font-size: 0.9rem;
+  font-size: 14px;
 }
-
 
 .container {
   /*во-первых лучше max-width чтобы не пострадала адаптивность, во-вторых пиксели привычнее как-то*/
-  width: 60rem;
+  max-width: 960px;
+  width: 100%;
   margin: 0 auto;
   font-size: 10px;
-  color: #DCDCDC;
+  color: var(--color-secondary);
+  padding: 0 5px;
+}
+
+ @media (max-width:700px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact_detail_item {
+    flex-basis: 45%;
+  }
+
+  .contact_detail_item:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+
+  .contact_detail_list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 15px;
+    justify-content: center;
+  }
 }
 
 .profile_img {
-  /*а вот это уже неудобно, вообще почти всё пишут в пикселях, хотя идею с em можно применять успешно в тех же блогах,
+   /*а вот это уже неудобно, вообще почти всё пишут в пикселях, хотя идею с em можно применять успешно в тех же блогах,
   когда нужно скалировать контент относительно пользовательского размера шрифта*/
-  width: 7.2rem;
-  height: 7.2rem;
-
+  width: 115px;
+  height: 115px;
   /*лучше 50%*/
-  border-radius: 55px;
+  border-radius: 50%;
 }
 
 .header {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
 }
 
 .profile {
   display: flex;
-  margin: 3rem 0 0;
 }
 
 .profile_detail {
-  margin: 0 0 0 0.5rem;
+  margin: 0 0 0 8px;
 }
 
 .profile_name {
-  font-size: 2rem;
+  font-size: 32px;
   font-weight: 800;
-  width: 25rem;
+  width: 300px;
   line-height: 1.1;
+  margin: 16px 0 0;
   /*если планируется несколько шрифтов, то лучше вынести их через css variables,
   а если шрифт планируется один, то его надо установить однажды на body тег*/
-  font-family: 'OpenSans';
-  font-style: normal;
 }
 
 .profile_position {
-  margin: 0.9rem 0 0;
-  font-size: 1.4rem;
+  font-size: 22px;
   font-weight: 400;
-  font-family: 'OpenSans';
-  font-style: normal;
 }
 
 .contact_detail {
-  margin: 1rem 0 0 13rem;
-
+  margin: 16px 0 0;
 }
 
 .contact_detail_list {
   list-style-type: none;
+  padding: 0;
 
 }
 
 .contact_detail_item {
   list-style-type: none;
-  margin: 0.8rem 0 0;
+  margin: 13px 0 0;
   display: flex;
   align-items: center;
-  column-gap: 0.5rem;
+  column-gap: 8px;
+
 }
 
 .contact_detail_icon {
-  width: 1rem;
-  height: 1rem;
-  color: #FFFFFF;
+  width: 16px;
+  height: 16px;
+  color: var(--color-secondary);
 }
 
 .contact_detail_text {
   font-style: italic;
   font-weight: 400;
-  font-size: 0.9rem;
+  font-size: 14px;
   line-height: 1.2;
-  color: #FFFFFF;
+  color: var(--color-secondary);
   text-decoration: none;
 }
 
 .main_content {
   display: flex;
-  margin: 0.9rem 0 0;
-  border-top: 1px solid #ffffff41;
+  margin: 14px 0 0;
+  border-top: 1px solid var(--color-lines);
 }
 
-.left_contect {
-  font-family: 'OpenSans';
-  font-style: normal;
-  width: 38rem;
+.main_content-left {
+  max-width: 608px;
+  width: 100%;
   /*очень много дублирования цветов, их тоже стоит выносить через переменные, например var(--border-color)*/
-  border-right: 1px solid #ffffff41;
-}
-
-/*это не используется, причем путь относительный в никуда*/
-.subtitle ::after {
-  content: '';
-  background-image: url('./svg/Rectangle 61329.svg');
-  width: 0.6rem;
-  height: 0.6rem;
+  border-right: 1px solid var(--color-lines);
 }
 
 .about {
-  padding: 0 0.5rem 1rem 0;
-  margin: 0.7rem 0 0;
-  border-bottom: 1px solid #ffffff41;
-  ;
+  padding: 0 8px 16px 0;
+  margin: 11px 0 0;
+  border-bottom: 1px solid var(--color-lines);
 }
 
 .about_description {
@@ -149,7 +167,7 @@ html {
 }
 
 .education {
-  padding: 1rem 0 0;
+  padding: 16px 0 0;
 }
 
 .education_name {
@@ -162,56 +180,34 @@ html {
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
-  margin: 0.5rem 0 0;
+  margin: 8px 0 0;
 }
 
-.technologies {
-  border-bottom: 1px solid #ffffff41;
-  ;
-  padding: 1rem 0.5rem 1rem 1.2rem;
-  font-family: 'OpenSans';
-  font-style: normal;
-}
-
-.languages {
-  border-bottom: 1px solid #ffffff41;
-  padding: 1rem 0.5rem 1rem 1.2rem;
-  font-family: 'OpenSans';
-  font-style: normal;
+.delimiter_section{
+  border-bottom: 1px solid var(--color-lines);
+  padding: 16px 8px 16px 19px;
 }
 
 .language_name {
   font-weight: 400;
   font-size: 15px;
   line-height: 18px;
-  font-family: 'OpenSans';
-  font-style: normal;
 }
 
 .hobbies {
-  padding: 1rem 0.5rem 1rem 1.2rem;
-  font-family: 'OpenSans';
-  font-style: normal;
+  padding: 16px 8px 16px 19px;
 }
 
 .hobbies_list {
   list-style-type: none;
+  padding: 0;
 }
 
 /*если нужен пользовательский шрифт, то логично бы поключить его в начале файла*/
 /*если шрифт есть через google fonts - лучше подключить оттуда*/
-@font-face {
-  font-family: 'OpenSans';
-  src: url(/fonts/OpenSans.ttf);
-  font-style: normal;
-  font-weight: normal;
-}
-
 .footer {
   text-align: center;
   margin: 150px 0 0;
   height: 100px;
-  color: white;
-  font-family: 'OpenSans';
-  font-style: normal;
+  color: var(--color-secondary);
 }

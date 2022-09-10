@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <!--lang=ru в данном случае, контент на русском-->
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Резюме</title>
+  <link rel="stylesheet" href="./style/normalize.css">
   <link rel="stylesheet" href="./style/style.css">
+
 </head>
 
 <body class="body">
   <div class="container">
     <div class="header">
       <div class="profile">
-<!--        b52UPejpihY.jpg - так не приветствуется, нужно нормально именовать, это касается и svg ниже-->
-        <img class="profile_img" src="./img/b52UPejpihY.jpg" alt="photo">
+        <!--        b52UPejpihY.jpg - так не приветствуется, нужно нормально именовать, это касается и svg ниже-->
+        <img class="profile_img" src="./img/photo.jpg" alt="photo">
         <div class="profile_detail">
           <h1 class="profile_name">Зубанов Дмитрий Вячеславович</h1>
           <span class="profile_position">Frontend</span>
@@ -24,30 +26,31 @@
       <div class="contact_detail">
         <ul class="contact_detail_list">
           <li class="contact_detail_item">
-            <img class="contact_detail_icon" src="./svg/Group 7936.svg" alt="">
-<!--            все внешние ссылки через target=_blank-->
-            <a class="contact_detail_text" href="mailto:cmdimasik@gmail.com">cmdimasik@gmail.com</a>
+            <i class="fa-solid fa-at"></i>
+            <!--            все внешние ссылки через target=_blank-->
+            <a class="contact_detail_text" href="mailto:cmdimasik@gmail.com" target="_blank">cmdimasik@gmail.com</a>
           </li>
           <li class="contact_detail_item">
-            <img class="contact_detail_icon" src="./svg/Path 22885.svg" alt="">
+            <i class="fa-solid fa-mobile-screen"></i>
             <a class="contact_detail_text" href="tel:+9267069013">+79267069013</a>
           </li>
           <li class="contact_detail_item">
-            <img class="contact_detail_icon" src="./svg/Path 22886.svg" alt="">
+            <i class="fa-sharp fa-solid fa-location-dot"></i>
             <a class="contact_detail_text"
-              href="https://yandex.ru/maps/geo/saransk/53105244/?ll=45.175620%2C54.206539&z=12.52">Республика Мордовия,
+              href="https://yandex.ru/maps/geo/saransk/53105244/?ll=45.175620%2C54.206539&z=12.52"
+              target="_blank">Республика Мордовия,
               Саранск</a>
           </li>
           <li class="contact_detail_item">
-            <img class="contact_detail_icon" src="./svg/github.svg" alt="">
-            <a class="contact_detail_text" href="https://github.com/wooxbe">github.com/wooxbe</a>
+            <i class="fa-brands fa-github"></i>
+            <a class="contact_detail_text" href="https://github.com/wooxbe" target="_blank">github.com/wooxbe</a>
           </li>
         </ul>
       </div>
     </div>
     <div class="main_content">
-<!--      плохое именование, этот же блок может быть и справа при другой компоновке, т.е. надо именовать блок по его содержимому-->
-      <div class="left_contect">
+      <!--      плохое именование, этот же блок может быть и справа при другой компоновке, т.е. надо именовать блок по его содержимому-->
+      <div class="main_content-left">
         <div class="about">
           <h2 class="title about_title">
             Обо мне
@@ -58,27 +61,27 @@
             новых знаний и укрепления текущих. Узнал о вас от своего знакомого, который начинал у вас обучение, но
             отказался в связи с тем, что параллельно обучался в другой кампании. Оффициального опыта работы у меня нет,
             но я довольно долгое время работаю на фрилансе в разных сферах. Пользуюсь компьютером довольно часто, знания
-            на уровне опытного пользователя. <br> Личные качества: доброжелательность, исполнительность, внимание к
-            мелочам, усидчивость, ответственность.</br>
+            на уровне опытного пользователя.  Личные качества: доброжелательность, исполнительность, внимание к
+            мелочам, усидчивость, ответственность.
           </div>
         </div>
         <div class="education">
           <h2 class="title education_title">Образование</h2>
           <div class="education_item">
             <div class="education_name">
-              Электромеханический колледж <br>Специальность - Компьютерные системы и комплексы. 2015-2019г</br>
+              Электромеханический колледж. Специальность - Компьютерные системы и комплексы. 2015-2019г
             </div>
           </div>
         </div>
       </div>
-      <div class="right_contect">
-        <div class="technologies">
+      <div class="main_content-right">
+        <div class="technologies delimiter_section">
           <h2 class="title technologies_title">Опыт программирования</h2>
           <div class="technologies_item">
             <div class="technologies_desc text">HTML, CSS (1 год), JavaScript (3 месяца), MySQL (4 месяца)</div>
           </div>
         </div>
-        <div class="languages">
+        <div class="languages delimiter_section">
           <h2 class="title language_title">Языки</h2>
           <div class="language_item">
             <h3 class="language_name">Английский: Уровень А2</h3>
@@ -88,16 +91,13 @@
           <h2 class="title hobbies_title">Мое хобби</h2>
           <ul class="hobbies_list">
             <li class="hobbies_item">
-<!--              м? если не планировал добавлять, то и не стоило-->
-              <img src="" alt="">
+              <!--              м? если не планировал добавлять, то и не стоило-->
               <span class="text">Чтение книг, музыка</span>
             </li>
             <li class="hobbies_item">
-              <img src="" alt="">
               <span class="text">Обучение новым технологиям</span>
             </li>
             <li class="hobbies_item">
-              <img src="" alt="">
               <span class="text">Графический дизайн</span>
             </li>
           </ul>
@@ -106,9 +106,10 @@
     </div>
    </div>
    <footer class="footer">
-<!--     это не параграф-->
-    <p>Отборочное задание для CodeMasters</p>
+    <!--     это не параграф-->
+    <span>Отборочное задание для CodeMasters</span>
   </footer>
+  <script src="https://kit.fontawesome.com/cfebe2e22c.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
